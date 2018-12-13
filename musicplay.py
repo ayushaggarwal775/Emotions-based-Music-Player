@@ -65,8 +65,8 @@ emotion_target_size = emotion_classifier.input_shape[1:3]
 gender_target_size = gender_classifier.input_shape[1:3]
 
 # loading images
-rgb_image = load_image(image_path, color_mode='rgb')
-gray_image = load_image(image_path,color_mode='grayscale')
+rgb_image = load_image(image_path, grayscale=False)
+gray_image = load_image(image_path,grayscale=True)
 gray_image = np.squeeze(gray_image)
 gray_image = gray_image.astype('uint8')
 
